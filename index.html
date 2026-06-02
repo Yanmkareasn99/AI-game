@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shadow Cycle Survival</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="hud" aria-label="Game status">
+        <div>
+          <span class="label">Cycle</span>
+          <strong id="phaseLabel">Day</strong>
+        </div>
+        <div>
+          <span class="label">Time</span>
+          <strong><span id="timeLeft">60</span>s</strong>
+        </div>
+        <div>
+          <span class="label">Health</span>
+          <strong id="healthLabel">100</strong>
+        </div>
+        <div>
+          <span class="label">Coins</span>
+          <strong id="coinsLabel">0</strong>
+        </div>
+        <div>
+          <span class="label">Bullets</span>
+          <strong id="bulletsLabel">0</strong>
+        </div>
+        <div>
+          <span class="label">Weapon</span>
+          <strong id="weaponLabel">Lv. 1</strong>
+        </div>
+      </header>
+
+      <section class="stage-wrap">
+        <canvas id="gameCanvas" width="960" height="540" aria-label="Shadow Cycle Survival game canvas"></canvas>
+        <div id="overlay" class="overlay hidden">
+          <h1>Shadow Cycle Survival</h1>
+          <p id="overlayText"></p>
+          <button id="restartButton" type="button">Restart</button>
+        </div>
+      </section>
+
+      <footer class="controls">
+        <div>
+          <h2>Controls</h2>
+          <p><kbd>WASD</kbd>/<kbd>Arrow Keys</kbd> move · <kbd>Space</kbd> shoot · <kbd>E</kbd> drag/release obstacle by day · <kbd>U</kbd> upgrade pistol</p>
+        </div>
+        <div>
+          <h2>Rules</h2>
+          <p>Collect coins and bullets during the day. Build cover before night. Survive monsters until sunrise.</p>
+        </div>
+      </footer>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
